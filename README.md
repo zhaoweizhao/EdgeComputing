@@ -7,12 +7,16 @@ TVM官方建议docker 镜像位置在https://hub.docker.com/r/tlcpack/
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/621685bb-efa4-4b56-8c33-585349531961)
 
 我们利用以下命令拉取我们所需要的镜像
-
 ```
 docker pull tlcpack/ci-gpu:20240105-165030-51bdaec6
 ```
+下载时间比较长,请耐心等待
 
-下载时间比较长
+创建并运行container
+```
+docker run --gpus all -tid --name=vit_tvm --ipc=host --network=host -v /datadisk/HeShaoWei/vit_tvm:/workspace/vit tlcpack/ci-gpu:20240105-165030-51bdaec6
+docker exec -it vit_tvm bash
+```
 
 ### 下载TVM源码
 ```
