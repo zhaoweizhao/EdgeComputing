@@ -9,7 +9,42 @@ TVM官方建议docker 镜像位置在https://hub.docker.com/r/tlcpack/
 我们利用以下命令拉取我们所需要的镜像
 
 ```
-
 docker pull tlcpack/ci-gpu:20240105-165030-51bdaec6
+```
 
+下载时间比较长
+
+### 下载TVM源码
+```
+git clone --recursive https://github.com/apache/tvm tvm
+```
+
+现在tvm目录里建一个build目录，把cmake目录下的config文件拷到build目录下
+
+```
+mkdir build
+cp cmake/config.cmake build
+```
+**make**
+```
+cd build
+cmake ..
+make -j4
+```
+**设置python环境**
+```
+# add TVM path
+export TVM_HOME=/root/workspace/tvm/
+export PYTHONPATH=$TVM_HOME/python:${PYTHONPATH}
+```
+**测试python环境**
+```
+root@KokomiDePC:/workspace/vit/tvm/build# python
+Python 3.8.18 (default, Aug 25 2023, 13:20:30)
+[GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tvm
+>>> print(tvm.__version__)
+0.16.dev0
+>>> exit()
 ```
