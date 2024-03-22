@@ -6,10 +6,12 @@
 
 ##举例
 于是就可以在/dev 目录下创建软链接。命令如下:
+
 `sudo mkdir -p "/dev/debs/partial"
 sudo rm -rf /var/cache/apt/archives
 sudo ln -s "/dev/debs" /var/cache/apt/archives
 `
+
 上述命令第一个时在 /dev 下创建了debs 以及其子文件夹 partial，命令加了引号，因为需要创建目录以及子目录。
 
 第二条命令删除了 /var/cache/apt/archives 文件。
