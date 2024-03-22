@@ -8,7 +8,9 @@
 于是就可以在/dev 目录下创建软链接。命令如下:
 
 `sudo mkdir -p "/dev/debs/partial"
+
 sudo rm -rf /var/cache/apt/archives
+
 sudo ln -s "/dev/debs" /var/cache/apt/archives
 `
 
