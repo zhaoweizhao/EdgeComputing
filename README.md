@@ -67,4 +67,5 @@ https://www.cnblogs.com/dawningblue/p/16874661.html
 重新去搜了个命令：  
 `pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html`
 ### 参考博客链接
-https://blog.csdn.net/qq_43900762/article/details/131441360
+https://blog.csdn.net/qq_43900762/article/details/131441360  
+https://pytorch.org/get-started/previous-versions/
