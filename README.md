@@ -56,3 +56,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 https://blog.csdn.net/sexyluna/article/details/135438181
 
 https://www.cnblogs.com/dawningblue/p/16874661.html
+
+## 查看源
+`cat /etc/apt/sources.list`
