@@ -59,3 +59,11 @@ https://www.cnblogs.com/dawningblue/p/16874661.html
 
 ## 查看源
 `cat /etc/apt/sources.list`
+
+## 安装cuda11.8版本的torch，但出现了torch.cuda.is_available()是false的问题(例子)
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/044b5e8d-cbf4-4d09-ba85-89c71d90721d)
+
+重新去搜了个命令：`pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html`
+### 参考博客链接
+https://blog.csdn.net/qq_43900762/article/details/131441360
