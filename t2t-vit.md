@@ -2,7 +2,7 @@
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/3912bcb6-cb35-463a-a13a-c3b2b8f6f407)  
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/cddf7a91-7944-4c52-8ed1-9d8f993edd37)  
 
-# from https://github.com/PaddlePaddle/PASSL/blob/main/passl/modeling/backbones/t2t_vit.py
+
 
 class T2T_module(nn.Layer):
     """
@@ -14,9 +14,7 @@ class T2T_module(nn.Layer):
                  in_chans=3,
                  embed_dim=768,
                  token_dim=64):
-        super().__init__()
-        
-        
+        super().__init__()   
     def forward(self, x):
         # step0: soft split
         x = self.soft_split0(x).transpose([0, 2, 1])
