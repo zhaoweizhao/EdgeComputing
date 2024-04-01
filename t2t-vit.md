@@ -4,43 +4,43 @@
 
 
 
-class T2T_module(nn.Layer):
-    """
-    Tokens-to-Token encoding module
-    """
-    def __init__(self,
-                 img_size=224,
-                 tokens_type='performer',
-                 in_chans=3,
-                 embed_dim=768,
-                 token_dim=64):
-        super().__init__()   
-    def forward(self, x):
-        # step0: soft split
-        x = self.soft_split0(x).transpose([0, 2, 1])
-
-        # iteration1: re-structurization/reconstruction
-        x = self.attention1(x)
-        B, new_HW, C = x.shape
-
-        x = x.transpose([0, 2, 1]).reshape(
-            [B, C, int(np.sqrt(new_HW)),
-             int(np.sqrt(new_HW))])
-        # iteration1: soft split
-        x = self.soft_split1(x).transpose([0, 2, 1])
-
-        # iteration2: re-structurization/reconstruction
-        x = self.attention2(x)
-        B, new_HW, C = x.shape
-        x = x.transpose([0, 2, 1]).reshape(
-            [B, C, int(np.sqrt(new_HW)),
-             int(np.sqrt(new_HW))])
-        # iteration2: soft split
-        x = self.soft_split2(x).transpose([0, 2, 1])
-
-        # final tokens
-        x = self.project(x)
-
-        return x
+        class T2T_module(nn.Layer):
+            """
+            Tokens-to-Token encoding module
+            """
+            def __init__(self,
+                         img_size=224,
+                         tokens_type='performer',
+                         in_chans=3,
+                         embed_dim=768,
+                         token_dim=64):
+                super().__init__()   
+            def forward(self, x):
+                # step0: soft split
+                x = self.soft_split0(x).transpose([0, 2, 1])
+        
+                # iteration1: re-structurization/reconstruction
+                x = self.attention1(x)
+                B, new_HW, C = x.shape
+        
+                x = x.transpose([0, 2, 1]).reshape(
+                    [B, C, int(np.sqrt(new_HW)),
+                     int(np.sqrt(new_HW))])
+                # iteration1: soft split
+                x = self.soft_split1(x).transpose([0, 2, 1])
+        
+                # iteration2: re-structurization/reconstruction
+                x = self.attention2(x)
+                B, new_HW, C = x.shape
+                x = x.transpose([0, 2, 1]).reshape(
+                    [B, C, int(np.sqrt(new_HW)),
+                     int(np.sqrt(new_HW))])
+                # iteration2: soft split
+                x = self.soft_split2(x).transpose([0, 2, 1])
+        
+                # final tokens
+                x = self.project(x)
+        
+                return x
 
 
