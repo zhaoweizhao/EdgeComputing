@@ -18,5 +18,6 @@
 例如，`pip uninstall opencv-python`
 
 2、安装完整包*opencv-contrib-python-headless<4.3*
+
 `pip install "opencv-contrib-python-headless<4.3" -i https://pypi.tuna.tsinghua.edu.cn/simple
 `
