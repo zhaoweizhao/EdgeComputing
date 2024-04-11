@@ -21,3 +21,9 @@
 
 `pip install "opencv-contrib-python-headless<4.3" -i https://pypi.tuna.tsinghua.edu.cn/simple
 `
+
+### python 导入其他目录下的模块
+**通用：从任意文件夹路径下导入模块**
+<img width="770" alt="image" src="https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/950ac3e4-431e-4cbd-bccc-0d30d8b591f5">
+
+参考博客：https://blog.csdn.net/Strive_For_Future/article/details/106716745
