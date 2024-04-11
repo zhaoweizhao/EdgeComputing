@@ -74,3 +74,9 @@ path_to_video_3 label_3
 path_to_video_N label_N
 ```
 
+5.参考：
+
+```javascript
+https://github.com/facebookresearch/SlowFast/blob/main/slowfast/datasets/DATASET.md
+https://blog.csdn.net/lidc1004/article/details/119926719
+https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400.md```
