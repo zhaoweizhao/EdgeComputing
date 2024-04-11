@@ -27,3 +27,14 @@
 <img width="770" alt="image" src="https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/950ac3e4-431e-4cbd-bccc-0d30d8b591f5">
 
 参考博客：https://blog.csdn.net/Strive_For_Future/article/details/106716745
+
+### NOTICE: Containers losing access to GPUs with error: "Failed to initialize NVML: Unknown Error"
+Containerized GPU workloads may suddenly lose access to their GPUs. This situation occurs when systemd is used to manage the cgroups of the container and it is triggered to reload any Unit files that have references to NVIDIA GPUs (e.g. with something as simple as a `systemctl daemon-reload`).
+
+When the container loses access to the GPU, you will see the following error message from the console output:
+
+`Failed to initialize NVML: Unknown Error`
+
+**The container needs to be deleted once the issue occurs.**
+
+When it is restarted (manually or automatically depending on the use of a container orchestration platform), it will regain access to the GPU.
