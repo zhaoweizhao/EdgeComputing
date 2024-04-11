@@ -46,8 +46,8 @@ When it is restarted (manually or automatically depending on the use of a contai
 解决办法：将类似于`torch.module.statedict()`语句中的module删掉，变成`torch.statedict()`
 
 ### Kinetics-400数据集
-百度网盘下载（现已存入我个人网盘中）
-1.下载label和raw-part中的文件，label里面存储的是标记信息，raw-part里面是视频分块的文件;
+
+1.从百度网盘上下载（现已存入我个人网盘中），下载label和raw-part中的文件，label里面存储的是标记信息，raw-part里面是视频分块的文件;
 
 2.拼接压缩包：
 
