@@ -38,3 +38,11 @@ When the container loses access to the GPU, you will see the following error mes
 **The container needs to be deleted once the issue occurs.**
 
 When it is restarted (manually or automatically depending on the use of a container orchestration platform), it will regain access to the GPU.
+
+### xx object has no attribute ‘module‘,do you mean 'modules'
+
+原因：**多卡训练转换到单卡训练**
+
+解决办法：将类似于`torch.module.statedict()`语句中的module删掉，变成`torch.statedict()`
+
+
