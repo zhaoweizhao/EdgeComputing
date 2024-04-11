@@ -45,4 +45,32 @@ When it is restarted (manually or automatically depending on the use of a contai
 
 解决办法：将类似于`torch.module.statedict()`语句中的module删掉，变成`torch.statedict()`
 
+### Kinetics-400数据集
+百度网盘下载（现已存入我个人网盘中）
+1.下载label和raw-part中的文件，label里面存储的是标记信息，raw-part里面是视频分块的文件;
+
+2.拼接压缩包：
+
+```javascript
+ cat compress.tar.gz.* > compress.tar.gz
+ tar zxvf compress.tar.gz
+```
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/96ff1042-1638-4910-a026-84e25f45beb8)
+
+3.下载整理过的record文件，再将该文件稍作处理，转换成.csv文件
+
+|类别 | 数据条数  | list文件 |
+| :------: | :----------: | :----: |
+|训练集 | 234619  |  [train.list](https://videotag.bj.bcebos.com/PaddleVideo/Data/Kinetic400/train.list)|
+|验证集 | 19761 |  [val.list](https://videotag.bj.bcebos.com/PaddleVideo/Data/Kinetic400/val.list)|
+
+4. .csv文件的格式应该是如下格式：
+   
+```
+path_to_video_1 label_1
+path_to_video_2 label_2
+path_to_video_3 label_3
+...
+path_to_video_N label_N
+```
 
