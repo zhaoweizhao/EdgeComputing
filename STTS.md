@@ -82,6 +82,11 @@ https://blog.csdn.net/lidc1004/article/details/119926719
 https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400.md
 ```
 
+| 左对齐 | 预处理 | Layer0 | Layer0 | Layer0 | Layer0 | Layer0 | Layer0 | Layer0 | Layer0 | Layer0 |
+| :----:| :----: | :----: | :----:| :----: | :----: | :----:| :----: | :----: | :----:| :----: |
+| GFLOPs | 16.994G | 42.222G | 16.994G | 42.222G | 16.994G | 42.222G | 16.994G | 42.222G | 16.994G |
+| Parameter | 42.432K | 353.681K | 42.432K | 353.681K | 42.432K | 353.681K | 42.432K | 353.681K | 42.432K |
+
 ## 计算量FLOPs
 
 **预处理：**
