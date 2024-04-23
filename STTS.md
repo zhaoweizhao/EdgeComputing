@@ -85,6 +85,8 @@ https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400
 ## [THOP: PyTorch-OpCounter](https://github.com/Lyken17/pytorch-OpCounter),计算模型的计算量和参数量
 安装thop `pip install thop`
 
+参考博客：https://blog.csdn.net/yiran103/article/details/97756720
+
 **通过thop，得到在每一个exiting point退出所需的计算量和参数量，如下表所示**
 |  | GFLOPs | Parameter |
 | :----:| :----: | :----: |
