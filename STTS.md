@@ -82,6 +82,11 @@ https://blog.csdn.net/lidc1004/article/details/119926719
 https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400.md
 ```
 
+## [THOP: PyTorch-OpCounter](https://github.com/Lyken17/pytorch-OpCounter),计算模型的计算量和参数量
+`pip install thop`
+
+
+
 |  | GFLOPs | Parameter |
 | :----:| :----: | :----: |
 | 预处理 | 16.994G | 42.432K |
