@@ -86,7 +86,18 @@ https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400
 | :----:| :----: | :----: |
 | 预处理 | 16.994G | 42.432K |
 | Layer0 | 42.222G | 353.681K |
-
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
+| Layer0 | 42.222G | 353.681K |
 
 
 ## 计算量FLOPs
