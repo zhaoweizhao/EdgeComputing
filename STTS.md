@@ -86,71 +86,24 @@ https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400
 | :----:| :----: | :----: |
 | 预处理 | 16.994G | 42.432K |
 | Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
-| Layer0 | 42.222G | 353.681K |
+| Layer1 | 71.872G | 884.481K |
+| Layer2 | 97.000G | 1.711M |
+| Layer3 | 126.586G | 3.649M |
+| Layer4 | 139.231G | 5.825M |
+| Layer5 | 149.607G | 7.760M |
+| Layer6 | 159.983G | 9.695M |
+| Layer7 | 170.359G | 11.629M |
+| Layer8 | 180.735G | 13.564M |
+| Layer9 | 191.111G | 15.499M |
+| Layer10 | 201.487G | 17.434M |
+| Layer11 | 211.863G | 19.369M |
+| Layer12 | 222.239G | 21.303M |
+| Layer13 | 237.779G | 24.278M |
+| Layer14 | 257.693G | 31.684M |
+| Layer15 | 270.141G | 39.086M |
 
 
-## 计算量FLOPs
 
-**预处理：**
-GFLOPs：16.994G
-
-Parameter：42.432K
-
-**Layer0：**
-GFLOPs：42.222G
-
-Parameter：353.681K
-
-**Layer1：**
-GFLOPs：71.872G
-
-Parameter：884.481K
-
-**Layer2：**
-GFLOPs：97.000G
-
-Parameter：1.711M
-
-**Layer3：**
-GFLOPs：126.586G
-
-Parameter：3.649M
-
-**Layer4：**
-GFLOPs：139.231G
-
-Parameter：5.825M
-
-**Layer5：**
-GFLOPs：149.607G
-
-Parameter：7.760M
-
-**Layer6：**
-GFLOPs：159.983G
-
-Parameter：9.695M
-
-**Layer7：**
-GFLOPs：170.359G
-
-Parameter：11.629M
-
-**Layer8：**
-GFLOPs：180.735G
-
-Parameter：13.564M
 
 
 
