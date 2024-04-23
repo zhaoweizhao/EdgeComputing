@@ -79,7 +79,8 @@ path_to_video_N label_N
 ```javascript
 https://github.com/facebookresearch/SlowFast/blob/main/slowfast/datasets/DATASET.md
 https://blog.csdn.net/lidc1004/article/details/119926719
-https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400.md```
+https://github.com/PaddlePaddle/PaddleVideo/blob/develop/docs/zh-CN/dataset/k400.md
+```
 
 ## 计算量FLOPs
 
