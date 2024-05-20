@@ -56,3 +56,23 @@ source ~/.bashrc
 4、初始化conda：
 
 `conda init`
+
+## 个人PC通过ssh连接Jetson，ssh连接出现问题
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/ec122718-74c4-4289-b555-a3753eb7726a)
+
+### 原因：
+此报错是由于远程的主机的公钥发生了变化导致的。 
+ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
+
+### 解决：
+使用命令清除所连接的IP 
+
+`ssh-keygen -R XX.XX.XX.XX `
+
+这里的'XX.XX.XX.XX'就是所要连接设备的ip地址
