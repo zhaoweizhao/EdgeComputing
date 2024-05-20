@@ -1,4 +1,4 @@
-## Nvidia Jetson Agx Xavier 刷机step3 internet connection 报错
+## Nvidia Jetson Agx Orin 刷机step3 internet connection 报错
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/6933305e-83b6-4fbc-a4fd-f05b142c67bf)
 
 ### 错误信息：
@@ -17,3 +17,7 @@ command < ssh -F /dev/null -o PreferredAuthentications-password -o PubkeyAuthent
 将下列内容写入并保存
 
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/ae1d7584-29bd-464a-a777-1ae08e750ba0)
+
+## Nvidia Jetson Agx Orin 刷机step2 下载出错（cuda Runtime组件下载失败）
+
+### 解决办法：把网络换成手机热点（个人PC和待刷机的Jetson Agx Orin要在同一局域网下）
