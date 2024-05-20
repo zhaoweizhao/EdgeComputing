@@ -21,3 +21,38 @@ command < ssh -F /dev/null -o PreferredAuthentications-password -o PubkeyAuthent
 ## Nvidia Jetson Agx Orin 刷机step2 下载出错（cuda Runtime组件下载失败）
 
 ### 解决办法：把网络换成手机热点（个人PC和待刷机的Jetson Agx Orin要在同一局域网下）
+
+##  Nvidia Jetson Agx Orin 刷机完成后，安装jtop
+
+```
+sudo apt-get update
+sudo apt-get install python-pip
+sudo apt-get install python3-pip
+sudo pip3 install jetson-stats
+sudo jtop   # 启动jtop
+```
+
+##  Nvidia Jetson Agx Orin 刷机完成后，初次安装Anaconda的注意事项
+1、寻找aarch64的shell安装包，下载地址[anaconda清华镜像源](https://repo.anaconda.com/archive/)，我选择的是`Anaconda3-2023.09-0-Linux-aarch64.sh`，由于Jetson下载过慢，可以先在个人PC下载下来，再通过`scp`指令传回Jetson中。
+
+**注：从此处开始，用Jetson代指Nvidia Jetson Agx Orin边缘设备**
+
+2、进入到下载文件夹，将下载改成可执行文件,再运行文件：
+
+```
+chmod +x Anaconda3-2021.11-Linux-aarch64.sh
+./Anaconda3-2021.11-Linux-aarch64.sh
+```
+
+3、如何找不到conda命令，可尝试下面的指令：
+
+```
+# 将anaconda的bin目录加入PATH，根据版本不同，也可能是~/anaconda3/bin
+echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
+# 更新bashrc以立即生效
+source ~/.bashrc
+```
+
+4、初始化conda：
+
+`conda init`
