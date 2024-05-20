@@ -222,3 +222,17 @@ custom_channels:
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ```
+
+
+**参考博客：**
+https://blog.csdn.net/weixin_53776054/article/details/128552701
+
+https://zhuanlan.zhihu.com/p/632052753
+
+https://blog.csdn.net/weixin_43702653/article/details/129249585
+
+https://zhuanlan.zhihu.com/p/597829245?
+
+https://blog.csdn.net/KIK9973/article/details/118795049
+
+https://blog.csdn.net/wangguchao/article/details/85614914
