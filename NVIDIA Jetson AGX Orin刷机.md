@@ -76,3 +76,22 @@ ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访�
 `ssh-keygen -R XX.XX.XX.XX `
 
 这里的'XX.XX.XX.XX'就是所要连接设备的ip地址
+
+## Jetson重装Anaconda的注意事项：
+1、要删除anaconda3文件夹
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/b5590c5a-2015-46a4-a4c1-989e7c2e330c)
+
+2、删除Anaconda的环境变量
+
+`sudo vim ~/.bashrc`
+
+删掉下面圈住的部分
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/638c190d-56c4-4e4c-9a01-538fa973de6c)
+
+
+
+
+
+
+
