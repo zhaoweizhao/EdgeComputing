@@ -91,5 +91,91 @@ ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访�
 
 3、终端输入`source ~/.bashrc`使环境变量更改生效。
 
+### Jetson重装Anaconda时，报错
+```
+>>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
 
+    Traceback (most recent call last):
+      File "conda/exceptions.py", line 1118, in __call__
+      File "conda/cli/main.py", line 61, in main_subshell
+      File "conda/base/context.py", line 399, in __init__
+      File "conda/common/configuration.py", line 1291, in __init__
+      File "conda/common/configuration.py", line 1297, in _set_search_path
+      File "conda/common/configuration.py", line 488, in load_file_configs
+      File "conda/common/configuration.py", line 488, in <genexpr>
+      File "conda/common/configuration.py", line 461, in _file_loader
+      File "conda/common/configuration.py", line 387, in make_raw_parameters_from_file
+      File "conda/common/serialize.py", line 57, in yaml_round_trip_load
+      File "ruamel/yaml/main.py", line 434, in load
+      File "ruamel/yaml/constructor.py", line 121, in get_single_data
+      File "ruamel/yaml/constructor.py", line 131, in construct_document
+      File "ruamel/yaml/constructor.py", line 1569, in construct_yaml_map
+      File "ruamel/yaml/constructor.py", line 1453, in construct_mapping
+      File "ruamel/yaml/constructor.py", line 294, in check_mapping_key
+    ruamel.yaml.constructor.DuplicateKeyError: while constructing a mapping
+      in "/root/.condarc", line 1, column 1
+    found duplicate key "show_channel_urls" with value "True" (original value: "True")
+      in "/root/.condarc", line 4, column 1
+    
+    To suppress this check see:
+        http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
+    
+
+`$ /root/miniconda3/conda.exe install --offline --file /root/miniconda3/pkgs/env.txt -yp /root/miniconda3`
+
+  environment variables:
+                 CIO_TEST=<not set>
+           CONDA_CHANNELS=https://repo.anaconda.com/pkgs/main,https://repo.anaconda.com/pkgs/r
+                CONDA_EXE=/root/miniconda3/bin/conda
+CONDA_EXTRA_SAFETY_CHECKS=no
+          CONDA_PKGS_DIRS=/root/miniconda3/pkgs
+         CONDA_PYTHON_EXE=/root/miniconda3/bin/python
+               CONDA_ROOT=/root/miniconda3/install_tmp/_MEIbiVABH
+      CONDA_SAFETY_CHECKS=disabled
+              CONDA_SHLVL=0
+           CURL_CA_BUNDLE=<not set>
+          LD_LIBRARY_PATH=/root/miniconda3/install_tmp/_MEIbiVABH
+               LD_PRELOAD=<not set>
+      OLD_LD_LIBRARY_PATH=
+                     PATH=/root/miniconda3/condabin:/usr/anaconda3/bin:/usr/local/sbin:/usr/loca
+                          l/bin:/usr/sbin:/usr/bin:/root/bin
+       REQUESTS_CA_BUNDLE=<not set>
+            SSL_CERT_FILE=<not set>
+
+     active environment : None
+            shell level : 0
+       user config file : /root/.condarc
+ populated config files : 
+          conda version : 22.11.1
+    conda-build version : not installed
+         python version : 3.9.15.final.0
+       virtual packages : __archspec=1=x86_64
+                          __glibc=2.17=0
+                          __linux=3.10.0=0
+                          __unix=0=0
+       base environment : /root/miniconda3/install_tmp/_MEIbiVABH  (read only)
+      conda av data dir : /root/miniconda3/install_tmp/_MEIbiVABH/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /root/miniconda3/install_tmp/_MEIbiVABH/pkgs
+                          /root/.conda/pkgs
+       envs directories : /root/.conda/envs
+                          /root/miniconda3/install_tmp/_MEIbiVABH/envs
+               platform : linux-64
+             user-agent : conda/22.11.1 requests/2.28.1 CPython/3.9.15 Linux/3.10.0-1160.45.1.el7.x86_64 centos/7.6.1810 glibc/2.17
+                UID:GID : 0:0
+             netrc file : None
+           offline mode : False
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+
+If submitted, this report will be used by core maintainers to improve
+future releases of conda.
+Would you like conda to send this report to the core maintainers? [y/N]:  
+Timeout reached. No report sent.
+```
 
