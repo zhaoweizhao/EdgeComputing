@@ -4,7 +4,7 @@ Both methods are integrated with the [STTS](https://arxiv.org/abs/2111.11591) vi
 STTS is a Transformer-based video model, and the version with 16 Transformer blocks is chosen for this study. The dataset used in this experiment is Kinetics-400.
 
 ## JEL-DNN
-1.JEL-DNN utilizes joint training to train both the GM and IM, thereby reducing the training gap between IM and GM and resulting in better performance.
+1.JEL-DNN utilizes joint training to train both the the gating mechanism (GM) and the intermediate inference modules (IMs), thereby reducing the training gap between IM and GM and resulting in better performance.
 
 2.The architecture produces reliable uncertainty characterization in the form of conformal intervals and well-calibrated predicted probabilities.
 
@@ -16,4 +16,8 @@ STTS is a Transformer-based video model, and the version with 16 Transformer blo
 The first figure shows the average accuracy and reduction in inference cost at different thresholds when using the early exit method from JEL-DNN combined with the STTS model.
 
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/7198eb70-fd2f-4a1b-b6c2-c3f1b5af4e6a)
+
+The second figure shows the classification accuracy of each IM on the entire dataset.
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/385ba3d3-3ddd-430b-b96f-b3047ddd4e55)
 
