@@ -4,9 +4,11 @@ Both methods are integrated with the [STTS](https://arxiv.org/abs/2111.11591) vi
 STTS is a Transformer-based video model, and the version with 16 Transformer blocks is chosen for this study. The dataset used in this experiment is Kinetics-400.
 
 ## JEL-DNN
-JEL-DNN utilizes joint training to train both the GM and IM, thereby reducing the training gap between IM and GM and resulting in better performance.
+1.JEL-DNN utilizes joint training to train both the GM and IM, thereby reducing the training gap between IM and GM and resulting in better performance.
 
-The architecture produces reliable uncertainty characterization in the form of conformal intervals and well-calibrated predicted probabilities;
+2.The architecture produces reliable uncertainty characterization in the form of conformal intervals and well-calibrated predicted probabilities.
+
+3.Training algorithm：
 
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/eb427ae1-7b0c-4ec2-b318-d1102b7b5779)
 
