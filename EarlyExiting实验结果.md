@@ -8,16 +8,23 @@ STTS is a Transformer-based video model, and the version with 16 Transformer blo
 
 2.The architecture produces reliable uncertainty characterization in the form of conformal intervals and well-calibrated predicted probabilities.
 
-3.Training algorithm：
+3.Training algorithm(JEL-DNN)：
 
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/eb427ae1-7b0c-4ec2-b318-d1102b7b5779)
 
-### Experimental result
-The first figure shows the average accuracy and reduction in inference cost at different thresholds when using the early exit method from JEL-DNN combined with the STTS model.
+4.Training algorithm(BoostedNet)：
 
-![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/7198eb70-fd2f-4a1b-b6c2-c3f1b5af4e6a)
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/fbd18afd-3a10-4ab6-b903-89db03044ce1)
 
-The second figure shows the classification accuracy of each IM on the entire dataset.
+## Experimental result
+The first figure shows the average accuracy and reduction in inference cost at different thresholds of GM when using the early exit method from **JEL-DNN** combined with the STTS model.
 
-![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/385ba3d3-3ddd-430b-b96f-b3047ddd4e55)
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/ceb707c3-84ff-4fa6-a60a-f1c8b98aa826)
 
+The second figure shows the average accuracy and reduction in inference cost at different thresholds of IM when using the early exit method from **Boosted** combined with the STTS model.
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/d4ab68c1-8628-463b-bfdc-e6a0791264bf)
+
+The third figure shows the classification accuracy of each IM on the entire dataset.
+
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/420cebdf-d560-4a6c-9063-875da4bdd392)
