@@ -1,0 +1,60 @@
+[05/31 13:42:38][INFO] kinetics.py:  77: Constructing Kinetics val...
+[05/31 13:42:38][INFO] kinetics.py: 139: Constructing kinetics dataloader (size: 46977) from /home/heshaowei/Data/Kinetics-400/label/val.csv
+[05/31 13:42:40][INFO] checkpoint.py: 212: Loading network weights from /home/heshaowei/STTS/1804sever/checkpoints/checkpoint_epoch19_acc18.47_confEE.pyth.
+[05/31 13:58:59][INFO] inference.py:  95: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer0:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer1:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer2:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer3:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer4:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer5:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer6:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer7:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer8:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer9:[0.0/0]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer10:[34.68718719482422/80.21479034423828]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer11:[14.128190040588379/73.69293212890625]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer12:[7.041743755340576/83.58525085449219]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer13:[15.618281364440918/85.29371643066406]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer14:[21.404090881347656/52.26255416870117]
+[05/31 13:58:59][INFO] inference.py: 102: Exiting Layer15:[7.1205058097839355/36.26308059692383]
+[05/31 13:58:59][INFO] inference.py: 107: acc_val=71.21144389807779,total_GFLOPs=227.00123596191406G
+[05/31 13:58:59][INFO] inference.py: 108: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
+[05/31 14:12:28][INFO] inference.py:  95: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer0:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer1:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer2:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer3:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer4:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer5:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer6:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer7:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer8:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer9:[0.0/0]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer10:[35.004364013671875/79.85283660888672]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer11:[14.245268821716309/75.07471466064453]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer12:[7.060902118682861/83.23786926269531]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer13:[15.543776512145996/84.8123779296875]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer14:[21.152904510498047/52.369930267333984]
+[05/31 14:12:28][INFO] inference.py: 102: Exiting Layer15:[6.992783546447754/38.325721740722656]
+[05/31 14:12:28][INFO] inference.py: 107: acc_val=71.46475935032038,total_GFLOPs=226.76144409179688G
+[05/31 14:12:28][INFO] inference.py: 108: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
+[05/31 14:25:58][INFO] inference.py:  95: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer0:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer1:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer2:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer3:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer4:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer5:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer6:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer7:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer8:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer9:[0.0/0]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer10:[34.9234733581543/80.31817626953125]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer11:[13.983438491821289/74.2426528930664]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer12:[7.252485275268555/84.29703521728516]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer13:[15.479915618896484/85.093505859375]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer14:[21.140132904052734/52.572750091552734]
+[05/31 14:25:58][INFO] inference.py: 102: Exiting Layer15:[7.220554828643799/37.26415252685547]
+[05/31 14:25:58][INFO] inference.py: 107: acc_val=71.5222342848628,total_GFLOPs=226.9000701904297G
+[05/31 14:25:58][INFO] inference.py: 108: ****************[0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8, 0.85, 0.9, 0.9]****************
