@@ -1,4 +1,4 @@
-This article introduces two methods for implementing early exit: the early exit method proposed in [JEL-DNN(ICLR)](https://arxiv.org/abs/2310.09163)和[BoostedNet(AAAI)](https://arxiv.org/abs/2211.16726) and the one in [BoostedNet(AAAI)](https://arxiv.org/abs/2211.16726). 
+This article introduces two methods for implementing early exit: the early exit method proposed in [JEL-DNN(ICLR)](https://arxiv.org/abs/2310.09163) and the one in [BoostedNet(AAAI)](https://arxiv.org/abs/2211.16726). 
 Both methods are integrated with the [STTS](https://arxiv.org/abs/2111.11591) video recognition model.
 
 STTS is a Transformer-based video model, and the version with 16 Transformer blocks is chosen for this study. The dataset used in this experiment is Kinetics-400.
