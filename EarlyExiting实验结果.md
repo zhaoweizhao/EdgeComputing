@@ -10,11 +10,7 @@ STTS is a Transformer-based video model, and the version with 16 Transformer blo
 
 3.Training algorithm(JEL-DNN)：
 
-![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/eb427ae1-7b0c-4ec2-b318-d1102b7b5779=300x200)
-
-4.Training algorithm(BoostedNet)：
-
-![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/fbd18afd-3a10-4ab6-b903-89db03044ce1)
+![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/eb427ae1-7b0c-4ec2-b318-d1102b7b5779)
 
 ## Experimental result
 The first figure shows the average accuracy and reduction in inference cost at different thresholds of GM when using the early exit method from **JEL-DNN** combined with the STTS model.
