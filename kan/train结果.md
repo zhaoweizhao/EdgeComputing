@@ -5,6 +5,7 @@ Node:This article uses the KAN from [Efficient KAN](https://github.com/Blealtan/
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/902abf2e-e2b6-45c4-bcd5-d087d6b5712e)
 
 ## 2.The model has not finished training yet, and the convergence is very slow.
+Node:
 
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/e1d50e6f-f827-4276-b6bd-3390ac61d426)
 ![image](https://github.com/zhaoweizhao/EdgeComputing/assets/151530559/190786a3-09e9-449d-b8ca-551e4d074f89)
