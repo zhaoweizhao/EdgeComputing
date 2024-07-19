@@ -119,6 +119,6 @@ avg_time:145.92
 ```
 | name | Params | dataset | acc@1 | latency | energy consumption |
 | --- | --- | --- | --- | --- | --- |
-| GFNet-XS/12(Baseline) | 15.92M | UMC | 99.52 | 145.92ms | 963.07mJ/100% |
-| GFNet-XS-distil/12 | 4.55M | UMC | 97.14 | 86.51ms | 519.06mJ/53.89% |
-| GFNet-XS-distil-dynn/12 | 4.64M | UMC | 95.71 | 77.16ms | 462.96mJ/48.1% |
+| GFNet-XS/12(Baseline) | 15.92M | UMC | 99.52 | 145.92ms | 963.07mJ/0% |
+| GFNet-XS-distil/12 | 4.55M | UMC | 97.14 | 86.51ms | 519.06mJ/46.10% |
+| GFNet-XS-distil-dynn/12 | 4.64M | UMC | 95.71 | 77.16ms | 462.96mJ/51.93% |
