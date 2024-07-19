@@ -127,4 +127,4 @@ Avg Forward Time per Image: 27.212321758270264 ms
 | --- | --- | --- | --- | --- | --- |
 | GFNet-XS/12(Baseline) | 15.92M | UMC | 99.52 | 145.92ms | 963.07mJ/0% |
 | GFNet-XS-distil/12 | 4.55M | UMC | 97.14 | 16.94ms | 59.30mJ/46.10% |
-| GFNet-XS-distil-dynn/12 | 4.64M | UMC | 95.71 | 15.66ms | 50.11mJ/51.93% |
+| GFNet-XS-distil-dynn/12 | 4.64M | UMC | 95.95 | 15.66ms | 50.11mJ/51.93% |
