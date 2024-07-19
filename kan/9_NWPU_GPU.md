@@ -27,6 +27,7 @@ Avg Forward Time per Image: 17.347342097570024 ms
 ```
 ## distil_12_192+Dynn GPU
 ```javascript
+Total number of parameters: 4758703
 power:11.0w - 8.0w
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 4199, 1535, 566]
 * Acc@1 94.429 Acc@5 99.587 loss 0.275
