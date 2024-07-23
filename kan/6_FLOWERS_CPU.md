@@ -64,3 +64,8 @@ FPS: 7.183831641106919
 elapsed_time_ms: 139.2014804854078
 Avg Forward Time per Image: 128.04416310233418 ms
 ```
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-XS/12(Baseline) | 15.64M | FLOWERS | 97.68 | 126.26ms | 963.07mJ/0% |
+| GFNet-XS-distil-256/12 | 7.29M | FLOWERS | 96.34 | 74.32ms | 519.06mJ/46.10% |
+| GFNet-XS-distil-dynn/12 | 7.87M | FLOWERS | 95.71 | 65.21ms | 462.96mJ/51.93% |
