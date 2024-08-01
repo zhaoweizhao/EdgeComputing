@@ -38,6 +38,7 @@ Avg Forward Time per Image: 85.80269321562751 ms
 ```
 ## GFNet-xs CPU
 ```javascript
+power:14.6w-8.0w
 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6300/6300 [16:38<00:00,  6.31it/s]
 FPS: 6.308416935942313
 elapsed_time_ms: 158.51837476094562
@@ -60,6 +61,6 @@ Avg Forward Time per Image: 153.13012830794804 ms
 ```
 | name | Params | dataset | acc@1 | latency | energy consumption |
 | --- | --- | --- | --- | --- | --- |
-| GFNet-XS/12(Baseline) | 15.93M | RESISC45 | 96.54 | 26.75ms | 139.1mJ/0% |
-| GFNet-XS-distil/12 | 4.56M | RESISC45 | 94.97 | 85.62ms | 513.72mJ/57.85% |
-| GFNet-XS-distil-dynn/12 | 4.75M | RESISC45 | 94.43 | 77.60ms | 465.60mJ/64.74% |
+| GFNet-XS/12(Baseline) | 15.93M | RESISC45 | 96.54 | 153.51ms | 1,013.16mJ/0% |
+| GFNet-XS-distil/12 | 4.56M | RESISC45 | 94.97 | 85.62ms | 513.72mJ/49.29% |
+| GFNet-XS-distil-dynn/12 | 4.75M | RESISC45 | 94.43 | 77.60ms | 465.60mJ/54.04% |
