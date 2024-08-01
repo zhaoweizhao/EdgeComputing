@@ -40,7 +40,7 @@ Avg Forward Time per Image: 14.839245591844831 ms
 ```
 
 
-### distil_12_192_dynn GPU
+### distil_12_192_dynn GPU(new)
 ```javascript
 [0, 0, 0, 0, 0, 0, 0, 175, 0, 223, 22, 0]
 * Acc@1 96.667 Acc@5 100.000 loss 0.224
