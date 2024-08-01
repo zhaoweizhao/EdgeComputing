@@ -99,7 +99,9 @@ Avg Forward Time per Image: 26.674143700372603 ms
 ## Orin Nano
 ### distil_12_192+Dynn GPU
 ```javascript
-power:7.8w-5.0w
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 4208, 1338, 754]
+* Acc@1 93.889 Acc@5 99.667 loss 0.243
+power:7.7w-5.0w
 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6300/6300 [02:27<00:00, 42.68it/s]
 FPS: 42.642662872540555
 elapsed_time_ms: 23.45069310021779
@@ -177,4 +179,9 @@ Avg Forward Time per Image: 32.290588674091154 ms
 FPS: 27.252015656734528
 elapsed_time_ms: 36.69453344647847
 Avg Forward Time per Image: 31.10201074963524 ms
-```
+```52
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-XS/12(Baseline) | 15.93M | RESISC45 | 96.54 | 32.01ms | 134.47mJ/0% |
+| GFNet-XS-distil/12 | 4.56M | RESISC45 | 94.97 | 17.08ms | 52.96mJ/60.61% |
+| GFNet-XS-distil-dynn/12 | 4.75M | RESISC45 | 93.89 | 17.70ms | 38.95mJ/71.03% |
