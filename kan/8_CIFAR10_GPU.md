@@ -333,4 +333,44 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ```
 ### distil-12-192-dynn 蒸馏
 ```javascript
-power:7w-5.0w
+power:8.0w-5.0w
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [03:38<00:00, 45.86it/s]
+FPS: 45.85430145073555
+elapsed_time_ms: 21.80820486545563
+Avg Forward Time per Image: 18.384045600891113 ms
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [03:34<00:00, 46.63it/s]
+FPS: 46.63007971575901
+elapsed_time_ms: 21.445384740829468
+Avg Forward Time per Image: 18.026765823364258 ms
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [03:32<00:00, 46.99it/s]
+FPS: 46.98784032747878
+elapsed_time_ms: 21.2821017742157
+Avg Forward Time per Image: 17.90388193130493 ms
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    22                                               @profile
+    23                                               def forward_features(self, x):
+    24                                                   # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
+    25                                                   # with slight modifications to add the dist_token
+    26     10100      57887.0      5.7      0.0          B = x.shape[0]
+    27     10100   14645044.7   1450.0      8.2          x = self.patch_embed(x)
+    28
+    29     10100     332165.1     32.9      0.2          cls_tokens = self.cls_token.expand(B, -1, -1)  # stole cls_tokens impl from Phil Wang, thanks
+    30     10100     172988.5     17.1      0.1          dist_token = self.dist_token.expand(B, -1, -1)
+    31     10100     928306.2     91.9      0.5          x = torch.cat((cls_tokens, dist_token, x), dim=1)
+    32
+    33     10100     696027.9     68.9      0.4          x = x + self.pos_embed
+    34     10100     531933.3     52.7      0.3          x = self.pos_drop(x)
+    35
+    36    131300     401601.0      3.1      0.2          for blk in self.blocks:
+    37    121200  159270387.2   1314.1     89.0              x = blk(x)
+    38
+    39     10100    1093610.4    108.3      0.6          x = self.norm(x)
+    40     10100     773735.5     76.6      0.4          return x[:, 0], x[:, 1]
+```
+### GFNet-xs
+```javascript
+power:9.0w - 5.0w
