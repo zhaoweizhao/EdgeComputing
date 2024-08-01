@@ -1,6 +1,7 @@
 ## Jetson AGX Orin
 ### distil_12_192+Dynn GPU(new)
 ```javascript
+threshold = 0.45
 Total number of parameters: 4758703
 power:11.5w - 8.0w
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 4207, 1338, 755]
