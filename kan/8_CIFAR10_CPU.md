@@ -1,7 +1,19 @@
 ![image](https://github.com/user-attachments/assets/df404fd0-95df-47fc-9166-e02fda69ab6f)![image](https://github.com/user-attachments/assets/0bd8f02e-dabc-4d11-98f4-e9ab2ef7155c)
 ![image](https://github.com/user-attachments/assets/f225ad8f-b321-46bb-8a2d-a4beb2e7653a)
 ![image](https://github.com/user-attachments/assets/4fadf51b-b881-4742-9a20-6dee8077a922)
-
+### distil-12-192-dynn 蒸馏+早退 new
+```javascript
+power:14.0w-8.0w
+100%|██████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [09:08<00:00, 18.23it/s]
+FPS: 18.22936137046163
+elapsed_time_ms: 54.85655694007874
+Avg Forward Time per Image: 51.29515073299408 ms
+100%|██████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [09:14<00:00, 18.03it/s]
+FPS: 18.029388077430863
+elapsed_time_ms: 55.46499946117401
+Avg Forward Time per Image: 51.867917799949645 ms
+```
+### distil-12-192-dynn 蒸馏+早退
 ```javascript
 100%|██████████████████████████████████████████████████████████████████████████| 10000/10000 [09:09<00:00, 18.20it/s]
 FPS: 18.1961751989434
@@ -31,7 +43,7 @@ Timer unit: 1e-06 s
 Total time: 514.56 s
 ```
 #########################################################################################
-
+### distil-12-192-dynn 蒸馏
 ```javascript
 
 100%|██████████████████████████████████████████████████████████████████████████| 10000/10000 [10:25<00:00, 16.00it/s]
@@ -55,6 +67,7 @@ Avg Forward Time per Image: 57.86465232372284 ms
 Wrote profile results to CPUtttt.py.lprof
 Timer unit: 1e-06 s
 ```
+### GFNet-xs cpu
 ```javascript
 
 100%|████████████████████████████████████████████████████████████████████████| 10000/10000 [21:36<00:00,  7.71it/s]
