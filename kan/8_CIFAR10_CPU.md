@@ -88,7 +88,7 @@ Timer unit: 1e-06 s
 | GFNet-XS/12(Baseline) | 15.6M | CIFAR10 | 98.47 | 125.7ms | 842.19mJ/0% |
 | GFNet-XS-distil/12 | 4.25M | CIFAR10 | 97.10 | 58.1ms | 360.22mJ/57.23% |
 | GFNet-XS-distil-dynn/12 | 4.29M | CIFAR10 | 96.46 | 51.2ms | 317.44mJ/62.31% |
-| GFNet-XS-distil-dynn-new/12 | 4.29M | CIFAR10 | 96.46 | 51.68ms | 310.08mJ/62.31% |
+| GFNet-XS-distil-dynn-new/12 | 4.27M | CIFAR10 | 96.06 | 51.68ms | 310.08mJ/63.18% |
 
 | name | Params | dataset | acc@1 |
 | --- | --- | --- | --- |
