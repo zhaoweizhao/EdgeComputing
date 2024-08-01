@@ -1,6 +1,8 @@
 ## CIFAR10 GPU
 ### distil-12-192-dynn 蒸馏+早退 new
 ```javascript
+power:11.0w-8.0w
+Total number of parameters: 4278137
 [0, 0, 0, 0, 0, 0, 0, 0, 2706, 3307, 962, 3025]
 * Acc@1 96.060 Acc@5 99.880 loss 0.173
 100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [02:59<00:00, 55.85it/s]
@@ -260,3 +262,4 @@ Avg Forward Time per Image: 26.264074826240538 ms
 | GFNet-XS/12(Baseline) | 15.6M | CIFAR10 | 98.47 | 26.31ms | 136.81mJ/0% |
 | GFNet-XS-distil/12 | 4.25M | CIFAR10 | 97.10 | 16.44ms | 59.18mJ/56.7% |
 | GFNet-XS-distil-dynn/12 | 4.29M | CIFAR10 | 96.46 | 16.14ms | 48.42mJ/64.6% |
+| GFNet-XS-distil-dynn-new/12 | 4.27M | CIFAR10 | 96.06 | 15.97ms | 47.92mJ/65.0% |
