@@ -4,6 +4,7 @@
 ### distil-12-192-dynn 蒸馏+早退 new
 ```javascript
 power:14.0w-8.0w
+avg_time:51.68ms
 100%|██████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [09:08<00:00, 18.23it/s]
 FPS: 18.22936137046163
 elapsed_time_ms: 54.85655694007874
@@ -12,6 +13,10 @@ Avg Forward Time per Image: 51.29515073299408 ms
 FPS: 18.029388077430863
 elapsed_time_ms: 55.46499946117401
 Avg Forward Time per Image: 51.867917799949645 ms
+100%|██████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [09:15<00:00, 18.01it/s]
+FPS: 18.01308134118065
+elapsed_time_ms: 55.51521036624908
+Avg Forward Time per Image: 51.89518051147461 ms
 ```
 ### distil-12-192-dynn 蒸馏+早退
 ```javascript
@@ -83,6 +88,7 @@ Timer unit: 1e-06 s
 | GFNet-XS/12(Baseline) | 15.6M | CIFAR10 | 98.47 | 125.7ms | 842.19mJ/0% |
 | GFNet-XS-distil/12 | 4.25M | CIFAR10 | 97.10 | 58.1ms | 360.22mJ/57.23% |
 | GFNet-XS-distil-dynn/12 | 4.29M | CIFAR10 | 96.46 | 51.2ms | 317.44mJ/62.31% |
+| GFNet-XS-distil-dynn-new/12 | 4.29M | CIFAR10 | 96.46 | 51.68ms | 310.08mJ/62.31% |
 
 | name | Params | dataset | acc@1 |
 | --- | --- | --- | --- |
