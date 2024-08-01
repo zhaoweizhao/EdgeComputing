@@ -1,5 +1,5 @@
 ## Jetson AGX Orin
-### distil_12_192+Dynn GPU
+### distil_12_192+Dynn GPU(new)
 ```javascript
 Total number of parameters: 4758703
 power:11.5w - 8.0w
