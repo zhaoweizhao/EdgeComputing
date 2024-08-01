@@ -22,6 +22,54 @@ Avg Forward Time per Image: 15.933584666252136 ms
 FPS: 52.60282711651317
 elapsed_time_ms: 19.010385084152222
 Avg Forward Time per Image: 16.34760754108429 ms
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   327                                               @profile #FLOWERS
+   328                                               def forward(self, x):
+   329     10000      51926.0      5.2      0.0          B = x.shape[0]
+   330     10000    5699237.8    569.9      3.5          x = self.patch_embed(x)
+   331     10000     319162.9     31.9      0.2          cls_tokens = self.cls_token.expand(B, -1, -1)
+   332     10000     216426.6     21.6      0.1          dist_token = self.dist_token.expand(B, -1, -1)
+   333     10000     823641.1     82.4      0.5          x = torch.cat((cls_tokens, dist_token, x), dim=1)
+   334     10000     645398.4     64.5      0.4          x = x + self.pos_embed
+   335     10000     580972.7     58.1      0.4          x = self.pos_drop(x)
+   336                                                   # threshold_tensor = torch.tensor(self.threshold, device=x.device)
+   337    107330     335088.2      3.1      0.2          for blk_idx, blk in enumerate(self.blocks):
+   338    104305  129516143.8   1241.7     79.9              x = blk.forward(x)
+   339    104305     139663.0      1.3      0.1              if blk_idx == 8:
+   340                                                           # x=x.to('cpu')
+   341     10000    1060740.2    106.1      0.7                  inter_z = self.norm(x)
+   342     10000    1171539.6    117.2      0.7                  inter_z = inter_z.to('cpu')
+   343     10000    1506421.3    150.6      0.9                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   344                                                           # inter_logit = inter_logit.to('cpu')
+   345     10000    6386508.0    638.7      3.9                  g = self.gates[blk_idx](inter_logit)
+   346     10000     199666.3     20.0      0.1                  g = torch.sigmoid(g)
+   347     10000     482395.4     48.2      0.3                  if g >= 0.55:
+   348      2706       6065.4      2.2      0.0                      return inter_logit, blk_idx
+   349     94305      61821.5      0.7      0.0              elif blk_idx == 9:
+   350                                                           # x=x.to('cpu')
+   351      7294     818107.4    112.2      0.5                  inter_z = self.norm(x)
+   352      7294     786400.0    107.8      0.5                  inter_z = inter_z.to('cpu')
+   353      7294     980239.3    134.4      0.6                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   354                                                           # inter_logit = inter_logit.to('cpu')
+   355      7294    4161371.7    570.5      2.6                  g = self.gates[blk_idx](inter_logit)
+   356      7294     125493.7     17.2      0.1                  g = torch.sigmoid(g)
+   357      7294     317354.7     43.5      0.2                  if g >= 0.55:
+   358      3308       7393.3      2.2      0.0                      return inter_logit, blk_idx
+   359     87011      73377.3      0.8      0.0              elif blk_idx == 10:
+   360      3986     445469.6    111.8      0.3                  inter_z = self.norm(x)
+   361      3986     419412.8    105.2      0.3                  inter_z = inter_z.to('cpu')
+   362      3986     529963.5    133.0      0.3                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   363      3986    2244101.4    563.0      1.4                  g = self.gates[blk_idx](inter_logit)
+   364      3986      67276.9     16.9      0.0                  g = torch.sigmoid(g)
+   365      3986     172363.8     43.2      0.1                  if g >= 0.65:
+   366       961       2157.0      2.2      0.0                      return inter_logit, blk_idx
+   367
+   368      3025     327190.4    108.2      0.2          x = self.norm(x)
+   369                                                   # x = x.to('cpu')
+   370      3025    1312756.1    434.0      0.8          x = (self.head(x[:, 0]) + self.head_dist(x[:, 1])) / 2
+   371      3025      56833.2     18.8      0.0          return x, len(self.blocks) - 1
 ```
 ### distil-12-192-dynn 蒸馏+早退
 ```javascript
