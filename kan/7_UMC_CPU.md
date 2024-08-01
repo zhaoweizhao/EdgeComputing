@@ -1,4 +1,4 @@
-## UMC CPU inference
+## UMC CPU inference(new)
 ### Distil+Dynn CPU
 ```javascript
 power:13.6w - 8.0w
