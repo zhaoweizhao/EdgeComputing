@@ -147,7 +147,39 @@ Avg Forward Time per Image: 18.146728220440092 ms
 FPS: 42.7762113479727
 elapsed_time_ms: 23.377479409414622
 Avg Forward Time per Image: 17.495989837343732 ms
-
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   297                                               @profile
+   298                                               def forward(self, x):
+   299     12600      84731.0      6.7      0.0          B = x.shape[0]
+   300     12600   15279101.3   1212.6      6.4          x = self.patch_embed(x)
+   301     12600     426605.0     33.9      0.2          cls_tokens = self.cls_token.expand(B, -1, -1)
+   302     12600     233178.3     18.5      0.1          dist_token = self.dist_token.expand(B, -1, -1)
+   303     12600    1886273.7    149.7      0.8          x = torch.cat((cls_tokens, dist_token, x), dim=1)
+   304     12600     964960.7     76.6      0.4          x = x + self.pos_embed
+   305     12600     755912.5     60.0      0.3          x = self.pos_drop(x)
+   306                                                   # threshold_tensor = torch.tensor(self.threshold, device=x.device)
+   307    133199     521147.2      3.9      0.2          for blk_idx, blk in enumerate(self.blocks):
+   308    131692  195581438.8   1485.1     82.1              x = blk.forward(x)
+   309                                                       # if blk_idx in [7, 9, 10]: ##cifar10
+   310                                                       # if blk_idx in [7, 8, 9]: ##UCM
+   311    131692     272436.9      2.1      0.1              if blk_idx in [ 9, 10]:
+   312
+   313     16785    1838569.7    109.5      0.8                  inter_z = self.norm(x)
+   314     16785     878882.4     52.4      0.4                  inter = inter_z[:, 0]
+   315     16785    2324835.3    138.5      1.0                  inter = inter.to('cpu')
+   316     16785    2186398.0    130.3      0.9                  inter_logit = self.intermediate_heads[blk_idx](inter)
+   317                                                           # inter_logit = (self.intermediate_heads[blk_idx](inter_z[:, 0]) + self.intermediate_heads_dist[blk_idx](inter_z[:, 1])) / 2
+   318                                                           # inter_logit = inter_logit.to('cpu')
+   319     16785   12401614.5    738.9      5.2                  g = self.gates[blk_idx](inter_logit)
+   320     16785     381074.7     22.7      0.2                  g = torch.sigmoid(g)
+   321     16785     924169.2     55.1      0.4                  if g >= self.threshold:  # 用torch.jit.script时可以使用.item()
+   322     11093      26060.0      2.3      0.0                      return inter_logit, blk_idx
+   323
+   324      1507     167133.2    110.9      0.1          x = self.norm(x)
+   325                                                   # x = x.to('cpu')
+   326      1507     942146.0    625.2      0.4          x = (self.head(x[:, 0]) + self.head_dist(x[:, 1])) / 2
+   327      1507      26190.0     17.4      0.0          return x, len(self.blocks) - 1
 ```
 ### distil_12_192 GPU
 ```javascript
