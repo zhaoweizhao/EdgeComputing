@@ -265,7 +265,7 @@ Avg Forward Time per Image: 26.264074826240538 ms
 | GFNet-XS-distil-dynn-new/12 | 4.27M | CIFAR10 | 96.06 | 15.97ms | 47.92mJ/65.0% |
 
 ## CIFAR10 GPU Orin Nano
-### distil-12-192-dynn 蒸馏+早退 new
+### distil-12-192-dynn 蒸馏+早退
 ```javascript
 power:7.6w-5.0w
 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [03:43<00:00, 44.72it/s]
@@ -278,4 +278,59 @@ FPS: 45.567270448086695
 elapsed_time_ms: 21.945576071739197
 Avg Forward Time per Image: 18.434002017974855 ms
 
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [03:39<00:00, 45.48it/s]
+FPS: 45.48307343175289
+elapsed_time_ms: 21.986201119422912
+Avg Forward Time per Image: 18.480722761154176 ms
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   329                                               @profile #FLOWERS CIFAR10
+   330                                               def forward(self, x):
+   331     10000      53861.5      5.4      0.0          B = x.shape[0]
+   332     10000   12867270.6   1286.7      7.0          x = self.patch_embed(x)
+   333     10000     336347.7     33.6      0.2          cls_tokens = self.cls_token.expand(B, -1, -1)
+   334     10000     199280.7     19.9      0.1          dist_token = self.dist_token.expand(B, -1, -1)
+   335     10000     955725.6     95.6      0.5          x = torch.cat((cls_tokens, dist_token, x), dim=1)
+   336     10000     693747.3     69.4      0.4          x = x + self.pos_embed
+   337     10000     584916.1     58.5      0.3          x = self.pos_drop(x)
+   338                                                   # threshold_tensor = torch.tensor(self.threshold, device=x.device)
+   339    107330     432845.7      4.0      0.2          for blk_idx, blk in enumerate(self.blocks):
+   340    104305  138751147.9   1330.2     75.8              x = blk.forward(x)
+   341    104305     180940.8      1.7      0.1              if blk_idx == 8:
+   342                                                           # x=x.to('cpu')
+   343     10000    1065921.8    106.6      0.6                  inter_z = self.norm(x)
+   344     10000    2034787.1    203.5      1.1                  inter_z = inter_z.to('cpu')
+   345     10000    1757611.9    175.8      1.0                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   346                                                           # inter_logit = inter_logit.to('cpu')
+   347     10000    7458319.9    745.8      4.1                  g = self.gates[blk_idx](inter_logit)
+   348     10000     218122.1     21.8      0.1                  g = torch.sigmoid(g)
+   349     10000     554739.6     55.5      0.3                  if g >= 0.55:
+   350      2706       6838.8      2.5      0.0                      return inter_logit, blk_idx
+   351     94305      97402.2      1.0      0.1              elif blk_idx == 9:
+   352                                                           # x=x.to('cpu')
+   353      7294     834007.6    114.3      0.5                  inter_z = self.norm(x)
+   354      7294    1073430.4    147.2      0.6                  inter_z = inter_z.to('cpu')
+   355      7294    1105379.1    151.5      0.6                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   356                                                           # inter_logit = inter_logit.to('cpu')
+   357      7294    4818480.7    660.6      2.6                  g = self.gates[blk_idx](inter_logit)
+   358      7294     138911.0     19.0      0.1                  g = torch.sigmoid(g)
+   359      7294     365224.2     50.1      0.2                  if g >= 0.55:
+   360      3308       8525.3      2.6      0.0                      return inter_logit, blk_idx
+   361     87011      72487.8      0.8      0.0              elif blk_idx == 10:
+   362      3986     452793.0    113.6      0.2                  inter_z = self.norm(x)
+   363      3986     580559.7    145.6      0.3                  inter_z = inter_z.to('cpu')
+   364      3986     596799.1    149.7      0.3                  inter_logit = self.intermediate_heads[blk_idx](inter_z[:, 0])
+   365      3986    2600031.3    652.3      1.4                  g = self.gates[blk_idx](inter_logit)
+   366      3986      73264.6     18.4      0.0                  g = torch.sigmoid(g)
+   367      3986     195658.8     49.1      0.1                  if g >= 0.65:
+   368       961       2420.1      2.5      0.0                      return inter_logit, blk_idx
+   369
+   370      3025     328288.3    108.5      0.2          x = self.norm(x)
+   371                                                   # x = x.to('cpu')
+   372      3025    1392229.9    460.2      0.8          x = (self.head(x[:, 0]) + self.head_dist(x[:, 1])) / 2
+   373      3025      52387.1     17.3      0.0          return x, len(self.blocks) - 1
 ```
+### distil-12-192-dynn 蒸馏
+```javascript
+power:7w-5.0w
