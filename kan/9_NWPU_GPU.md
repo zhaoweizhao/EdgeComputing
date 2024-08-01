@@ -179,7 +179,7 @@ Avg Forward Time per Image: 32.290588674091154 ms
 FPS: 27.252015656734528
 elapsed_time_ms: 36.69453344647847
 Avg Forward Time per Image: 31.10201074963524 ms
-```52
+```
 | name | Params | dataset | acc@1 | latency | energy consumption |
 | --- | --- | --- | --- | --- | --- |
 | GFNet-XS/12(Baseline) | 15.93M | RESISC45 | 96.54 | 32.01ms | 134.47mJ/0% |
