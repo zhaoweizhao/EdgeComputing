@@ -82,3 +82,52 @@ Exiting Layer11:[0.9523809552192688/100.0]
 acc_val=97.14285714285714,total_GFLOPs=247.00169372558594G
 ****************0.8****************
 ```
+### CIFAR10
+```javascript
+****************0.75****************
+Exiting Layer0:[0.0/0]
+Exiting Layer1:[0.0/0]
+Exiting Layer2:[0.0/0]
+Exiting Layer3:[0.0/0]
+Exiting Layer4:[0.0/0]
+Exiting Layer5:[18.0/99.55555725097656]
+Exiting Layer6:[4.440000057220459/98.87387084960938]
+Exiting Layer7:[15.979999542236328/99.74968719482422]
+Exiting Layer8:[31.200000762939453/98.94230651855469]
+Exiting Layer9:[23.469999313354492/98.08265686035156]
+Exiting Layer10:[6.909999847412109/84.37047576904297]
+Exiting Layer11:[0.0/0]
+acc_val=97.97,total_GFLOPs=187.98910522460938G
+****************0.75****************
+threshold:0.75-->expected_acc:97.97<=>expected_GFLOPs187.98910522460938G
+Val:  [  0/105]  eta: 0:01:30    time: 0.8634  data: 0.6582  max mem: 425
+Val:  [ 10/105]  eta: 0:00:27    time: 0.2850  data: 0.0692  max mem: 425
+Val:  [ 20/105]  eta: 0:00:21    time: 0.2196  data: 0.0094  max mem: 425
+Val:  [ 30/105]  eta: 0:00:17    time: 0.2123  data: 0.0084  max mem: 425
+Val:  [ 40/105]  eta: 0:00:15    time: 0.2169  data: 0.0081  max mem: 425
+Val:  [ 50/105]  eta: 0:00:12    time: 0.2088  data: 0.0081  max mem: 425
+Val:  [ 60/105]  eta: 0:00:09    time: 0.1964  data: 0.0090  max mem: 425
+Val:  [ 70/105]  eta: 0:00:07    time: 0.2120  data: 0.0102  max mem: 425
+Val:  [ 80/105]  eta: 0:00:05    time: 0.2162  data: 0.0101  max mem: 425
+Val:  [ 90/105]  eta: 0:00:03    time: 0.2151  data: 0.0091  max mem: 425
+Val:  [100/105]  eta: 0:00:01    time: 0.2250  data: 0.0086  max mem: 425
+Val:  [104/105]  eta: 0:00:00    time: 0.2185  data: 0.0085  max mem: 425
+Val: Total time: 0:00:23 (0.2212 s / it)
+10000
+9831
+****************0.8****************
+Exiting Layer0:[0.0/0]
+Exiting Layer1:[0.0/0]
+Exiting Layer2:[0.0/0]
+Exiting Layer3:[0.0/0]
+Exiting Layer4:[0.0/0]
+Exiting Layer5:[5.289999961853027/100.0]
+Exiting Layer6:[1.909999966621399/100.0]
+Exiting Layer7:[12.920000076293945/100.0]
+Exiting Layer8:[35.22999954223633/99.71614837646484]
+Exiting Layer9:[31.700000762939453/99.4637222290039]
+Exiting Layer10:[12.949999809265137/89.03475189208984]
+Exiting Layer11:[0.0/0]
+acc_val=98.31,total_GFLOPs=193.60150146484375G
+****************0.8****************
+```
