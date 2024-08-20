@@ -42,6 +42,53 @@ Exiting Layer10:[0.0/0]
 Exiting Layer11:[0.0/0]
 acc_val=95.77777777777777,total_GFLOPs=220.03750610351562G
 ****************0.55****************
+[0.0, 0.0, 0.0, 0.0, 99.78448275862068, 98.64661654135338, 0.0, 96.954986760812, 0.0, 0.0, 0.0, 79.44358578052551]
+[0, 0, 0, 0, 1392, 1995, 0, 2266, 0, 0, 0, 647]
+[0.0, 0.0, 0.0, 0.0, 22.095238095238095, 31.666666666666664, 0.0, 35.96825396825397, 0.0, 0.0, 0.0, 10.269841269841269]
+* Acc@1 96.317 Acc@5 99.714 loss 0.236
+Unfreezing classifiers after warmup
+warm up ...
+
+testing ...
+
+100%|███████████████████████████████████████████████████████████████████████████████| 6300/6300 [02:29<00:00, 42.13it/s]
+FPS: 42.13030808257747
+elapsed_time_ms: 23.735881495097328
+Avg Forward Time per Image: 19.05335369564238 ms
+Wrote profile results to CPUtttt.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 222.35 s
+File: /home/nvidia/heShaoWei/GFNet/dynn/gfnet_dynn.py
+Function: forward at line 529
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   529                                               @profile
+   530                                               def forward(self, x):
+   531     12600      68754.6      5.5      0.0          B = x.shape[0]
+   532     12600    7316785.0    580.7      3.3          x = self.patch_embed(x)
+   533     12600     912543.7     72.4      0.4          x = x + self.pos_embed
+   534     12600     735237.8     58.4      0.3          x = self.pos_drop(x)
+   535     90934     379185.3      4.2      0.2          for blk_idx, blk in enumerate(self.blocks):
+   536     89640  174349566.6   1945.0     78.4              x = blk.forward(x)
+   537                                                       # if blk_idx in [8, 9, 10]:
+   538                                                       # if blk_idx in [7, 8, 9]: ##UCM
+   539     89640     175766.0      2.0      0.1              if blk_idx in [4, 5, 7]:##NWPU
+   540
+   541     28240    5903168.9    209.0      2.7                  inter_z = self.norm(x).mean(1)
+   542     28240    9163862.3    324.5      4.1                  inter_z = inter_z.to('cpu')
+   543     28240    3368147.8    119.3      1.5                  inter_logit = self.intermediate_heads[blk_idx](inter_z)
+   544                                                           # inter_logit = inter_logit.to('cpu')
+   545     28240   17656670.2    625.2      7.9                  g = self.gates[blk_idx](inter_logit)
+   546     28240     495871.0     17.6      0.2                  g = torch.sigmoid(g)
+   547     28240    1259301.6     44.6      0.6                  if g >= self.threshold:  # 用torch.jit.script时可以使用.item()
+   548     11306      25409.2      2.2      0.0                      return inter_logit, blk_idx
+   549
+   550      1294     265058.4    204.8      0.1          x = self.norm(x).mean(1)
+   551                                                   # x = x.to('cpu')
+   552      1294     250146.7    193.3      0.1          x = self.head(x)
+   553      1294      24632.6     19.0      0.0          return x, len(self.blocks) - 1
 ```
 ### UCM
 ```javascript
