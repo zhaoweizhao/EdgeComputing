@@ -43,3 +43,42 @@ Exiting Layer11:[0.0/0]
 acc_val=95.77777777777777,total_GFLOPs=220.03750610351562G
 ****************0.55****************
 ```
+### UCM
+```javascript
+****************0.75****************
+Exiting Layer0:[0.0/0]
+Exiting Layer1:[0.0/0]
+Exiting Layer2:[0.0/0]
+Exiting Layer3:[0.0/0]
+Exiting Layer4:[0.0/0]
+Exiting Layer5:[0.0/0]
+Exiting Layer6:[26.66666603088379/100.0]
+Exiting Layer7:[47.619049072265625/99.5]
+Exiting Layer8:[16.904762268066406/85.91548919677734]
+Exiting Layer9:[8.809523582458496/81.0810775756836]
+Exiting Layer10:[0.0/0]
+Exiting Layer11:[0.0/0]
+acc_val=95.71428571428572,total_GFLOPs=234.17755126953125G
+****************0.75****************
+threshold:0.75-->expected_acc:95.71428571428572<=>expected_GFLOPs234.17755126953125G
+Val:  [0/5]  eta: 0:00:05    time: 1.1084  data: 0.8492  max mem: 510
+Val:  [4/5]  eta: 0:00:00    time: 0.3761  data: 0.1795  max mem: 510
+Val: Total time: 0:00:01 (0.3914 s / it)
+420
+408
+****************0.8****************
+Exiting Layer0:[0.0/0]
+Exiting Layer1:[0.0/0]
+Exiting Layer2:[0.0/0]
+Exiting Layer3:[0.0/0]
+Exiting Layer4:[0.0/0]
+Exiting Layer5:[0.0/0]
+Exiting Layer6:[0.0/0]
+Exiting Layer7:[33.33333206176758/100.0]
+Exiting Layer8:[15.952381134033203/100.0]
+Exiting Layer9:[36.66666793823242/98.05194854736328]
+Exiting Layer10:[13.095237731933594/83.63636016845703]
+Exiting Layer11:[0.9523809552192688/100.0]
+acc_val=97.14285714285714,total_GFLOPs=247.00169372558594G
+****************0.8****************
+```
