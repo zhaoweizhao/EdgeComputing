@@ -276,8 +276,8 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
    553      2596      48450.4     18.7      0.0          return x, len(self.blocks) - 1
 ```
 
-96.31
 
+## AGX
 | name | Params | dataset | acc@1 | latency | energy consumption |
 | --- | --- | --- | --- | --- | --- |
 | GFNet-12-384(Baseline) | 15.60M | CIFAR10 | 98.47 | 26.31ms | 136.81mJ/0% |
@@ -292,3 +292,5 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 | GFNet-distil-12-192 | 4.55M | UMC | 98.57 | 15.08ms | 52.79mJ/61.51% |
 | GFNet-dynn-12-192 | 16.01M | UMC | 98.57 | 23.83ms | **112.00mJ/18.35%** |
 | GFNet-dynn-12-192 | 4.64M | UMC | 96.66 | 14.12ms | **42.37mJ/69.11%** |
+
+## Nano
