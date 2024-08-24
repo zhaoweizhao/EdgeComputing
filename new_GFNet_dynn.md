@@ -275,3 +275,20 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
    552      2596     463734.2    178.6      0.1          x = self.head(x)
    553      2596      48450.4     18.7      0.0          return x, len(self.blocks) - 1
 ```
+
+96.31
+
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-12-384(Baseline) | 15.60M | CIFAR10 | 98.47 | 26.31ms | 136.81mJ/0% |
+| GFNet-distil-12-192 | 4.25M | CIFAR10 | 97.10 | 16.44ms | 59.18mJ/56.7% |
+| GFNet-dynn-12-384 | 15.65M | CIFAR10 | 98.45 | 23.14ms | **108.75mJ/20.5%** |
+| GFNet-dynn-12-192 | 4.27M | CIFAR10 | 96.06 | 15.97ms | **47.92mJ/65.0%** |
+| GFNet-12-384(Baseline) | 15.93M | RESISC45 | 96.54 | 26.75ms | 139.10mJ/0% |
+| GFNet-distil-12-192 | 4.56M | RESISC45 | 94.97 | 16.75ms | 58.62mJ/57.85% |
+| GFNet-dynn-12-384 | 16.12M | RESISC45 | 96.31 | 19.15ms | **90.00mJ/35.29%** |
+| GFNet-dynn-12-192 | 4.56M | RESISC45 | 93.89 | 14.09ms | **49.31mJ/64.55%** |
+| GFNet-12-384(Baseline) | 15.92M | UMC | 99.52 | 25.88ms | 137.17mJ/0% |
+| GFNet-distil-12-192 | 4.55M | UMC | 98.57 | 15.08ms | 52.79mJ/61.51% |
+| GFNet-dynn-12-192 | 16.01M | UMC | 98.57 | 23.83ms | **112.00mJ/18.35%** |
+| GFNet-dynn-12-192 | 4.64M | UMC | 96.66 | 14.12ms | **42.37mJ/69.11%** |
