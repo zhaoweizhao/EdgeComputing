@@ -293,6 +293,14 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 | GFNet-dynn-12-384 | 16.01M | UMC | 98.57 | 23.83ms | **112.00mJ/18.35%** |
 | GFNet-dynn-12-192 | 4.64M | UMC | 96.66 | 14.12ms | **42.37mJ/69.11%** |
 
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-distil-12-192 | 4.25M | CIFAR10 | 97.10 | 16.44ms | 59.18mJ/56.7% |
+| GFNet-dynn-12-384 | 15.65M | CIFAR10 | 98.45 | 23.14ms | **108.75mJ/20.5%** |
+| GFNet-distil-12-192 | 4.56M | RESISC45 | 94.97 | 16.75ms | 58.62mJ/57.85% |
+| GFNet-dynn-12-384 | 16.12M | RESISC45 | 96.31 | 19.15ms | **90.00mJ/35.29%** |
+| GFNet-distil-12-192 | 4.55M | UMC | 98.57 | 15.08ms | 52.79mJ/61.51% |
+| GFNet-dynn-12-384 | 16.01M | UMC | 98.57 | 23.83ms | **112.00mJ/18.35%** |
 ## Nano
 | name | Params | dataset | acc@1 | latency | energy consumption |
 | --- | --- | --- | --- | --- | --- |
@@ -308,3 +316,12 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 | GFNet-distil-12-192 | 4.55M | UMC | 98.57 | 17.55ms | 52.65mJ/60.87% |
 | GFNet-dynn-12-384 | 16.01M | UMC | 98.57 | 30.63ms | **110.26mJ/18.06%** |
 | GFNet-dynn-12-192 | 4.64M | UMC | 96.66 | 16.84ms | **43.80mJ/67.44%** |
+
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-distil-12-192 | 4.25M | CIFAR10 | 97.10 | 18.10ms | 54.3mJ/59.78% |
+| GFNet-dynn-12-384 | 15.65M | CIFAR10 | 98.45 | 30.92ms | **111.31mJ/17.57%** |
+| GFNet-distil-12-192 | 4.56M | RESISC45 | 94.97 | 17.08ms | 52.96mJ/60.61% |
+| GFNet-dynn-12-384 | 16.12M | RESISC45 | 96.31 | 24.94ms | **89.78mJ/33.23%** |
+| GFNet-distil-12-192 | 4.55M | UMC | 98.57 | 17.55ms | 52.65mJ/60.87% |
+| GFNet-dynn-12-384 | 16.01M | UMC | 98.57 | 30.63ms | **110.26mJ/18.06%** |
