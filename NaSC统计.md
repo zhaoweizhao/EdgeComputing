@@ -36,3 +36,9 @@ FPS: 6.688610805748307
 elapsed_time_ms: 149.50787675380707
 Avg Forward Time per Image: 137.98511749505997 ms
 ```
+### NVIDIA Jetson AGX Orin
+| name | Params | dataset | acc@1 | latency | energy consumption |
+| --- | --- | --- | --- | --- | --- |
+| GFNet-12-384(Baseline) | 15.6M | CIFAR10 | 98.47 | 26.31ms | 136.81mJ/0% |
+| GFNet-distil-12-192 | 4.25M | CIFAR10 | 97.10 | 16.44ms | 59.18mJ/56.7% |
+| GFNet-dynn-12-192 | 4.27M | CIFAR10 | 96.06 | 15.97ms | **47.92mJ/65.0%** |
