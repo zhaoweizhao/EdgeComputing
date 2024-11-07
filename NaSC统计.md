@@ -1,3 +1,4 @@
+
 ## Nano
 ```javascript
 <<<<<<+++++++++++++GFNet-xs: Time = 28.71ms Energy = 58.88mJ +++++++++++++>>>>>>
@@ -37,8 +38,14 @@ elapsed_time_ms: 149.50787675380707
 Avg Forward Time per Image: 137.98511749505997 ms
 ```
 ### NVIDIA Jetson AGX Orin
-| name | Params | dataset | acc@1 | latency | energy consumption |
-| --- | --- | --- | --- | --- | --- |
-| GFNet-12-384(Baseline) | 15.6M | CIFAR10 | 98.47 | 26.31ms | 136.81mJ/0% |
-| GFNet-distil-12-192 | 4.25M | CIFAR10 | 97.10 | 16.44ms | 59.18mJ/56.7% |
-| GFNet-dynn-12-192 | 4.27M | CIFAR10 | 96.06 | 15.97ms | **47.92mJ/65.0%** |
+| name | Params | dataset | acc@1 | latency | energy consumption | improve |
+| --- | --- | --- | --- | --- | --- | --- |
+| GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 19.47ms | 61.34mJ | - |
+| Distillation | 3.92M | NaSC | 98.28 | 16.44ms | 37.28mJ | 39.22% |
+| **Distillation+dynn** | **3.94M** | NaSC | **97.55** | 14.02ms | **35.06mJ** | **42.84%** |
+
+| name | Params | dataset | acc@1 |
+| --- | --- | --- | --- |
+| GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 |
+| Distillation | 3.92M | NaSC | 98.28 |
+| **Distillation+dynn** | **3.94M** | NaSC | **97.55** |
