@@ -65,6 +65,13 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
    319      2206    1642060.3    744.4      1.1          x = (self.head(x[:, 0]) + self.head_dist(x[:, 1])) / 2
    320      2206      60029.4     27.2      0.0          return x, len(self.blocks) - 1
 ```
+```javascript
 311      7260   42799234.7   5895.2     27.9                  inter_z = inter_z.to('cpu')
 311     11088    1402677.9    126.5      1.3                  inter_z = inter_z.to('cpu')
 311      6920     714044.3    103.2      1.1                  inter_z = inter_z.to('cpu')
+```
+| shape | image_size | dataset | time(to CPU)  |
+| --- | --- | --- | --- |
+| [1,66,192] | 128*128 | NaSC | 103.2 |
+| [1,258,192] | 256*256 | NWPU | 126.5 |
+| [1,1602,192] | 600*600 | AID | 5895.2 |
