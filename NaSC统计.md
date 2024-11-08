@@ -4,6 +4,13 @@
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 27.0, 0.0, 31.324999999999996, 29.275000000000002, 12.4]
 * Acc@1 97.875 Acc@5 100.000 loss 0.115
 ```
+|  | Layer7 | Layer9 | Layer10  | Last Layer  |
+| --- | --- | --- | --- | --- |
+| Exit Rate | 27.0% | 31.32% | 29.28% | 12.4% |
+| Exit Accuracy | 99.3 | 98.8 | 99.4 | 88.5 |
+
+
+
 ### NVIDIA Jetson AGX Orin
 | name | Params | dataset | acc@1 | latency | energy consumption | improve |
 | --- | --- | --- | --- | --- | --- | --- |
