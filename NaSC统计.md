@@ -82,3 +82,10 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 | [1,66,192] | 128*128*3 | NaSC | 103.2 |
 | [1,258,192] | 256*256*3 | NWPU | 126.5 |
 | [1,1602,192] | 600*600*3 | AID | 5895.2 |
+
+
+| name | Params | dataset | acc@1 |
+| --- | --- | --- | --- |
+| GFNet-12-384(Baseline) | 17.42M | AID | 96.25 |
+| Distillation | 5.40M | AID | 92.85 |
+| **Distillation+dynn** | **5.46M** | AID | **90.45** |
