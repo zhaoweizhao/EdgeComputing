@@ -23,9 +23,9 @@ PatternNet
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 19.47ms | 61.34mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 16.44ms | 37.28mJ | 39.22% |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 14.02ms | **35.06mJ** | **42.84%** |
-| GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 19.47ms | 61.34mJ | - |
-| Distillation | 4.56M | PatternNet | 98.93 | 16.44ms | 37.28mJ | 39.22% |
-| **Distillation+dynn** | **4.72M** | PatternNet | **98.32** | 14.02ms | **35.06mJ** | **42.84%** |
+| GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 17.11ms | 117.20mJ | - |
+| Distillation | 4.56M | PatternNet | 98.93 | 16.47ms | 56.02mJ | 52.20% |
+| **Distillation+dynn** | **4.72M** | PatternNet | **98.32** | 14.00ms | **44.79mJ** | **61.78%** |
 
 ### NVIDIA Jetson Orin Nano
 | name | Params | dataset | acc@1 | latency | energy consumption | improve |
