@@ -33,6 +33,9 @@ PatternNet
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 28.71ms | 58.88mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 16.53ms | 32.63mJ | 44.58% |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 16.34ms | **27.77mJ** | **52.83%** |
+| GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 18.77ms | 107.01mJ | - |
+| Distillation | 4.56M | PatternNet | 98.93 | 18.74ms | 52.49mJ | 50.94% |
+| **Distillation+dynn** | **4.72M** | PatternNet | **98.32** | 16.30ms | **39.12mJ** | **63.44%** |
 
 ### Raspberry Pi 4 Model B
 | name | Params | dataset | acc@1 | latency | energy consumption | improve |
@@ -40,6 +43,7 @@ PatternNet
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 381.6ms | 412.12mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 156.5ms | 151.80mJ | 63.16% |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 137.9ms | **133.76mJ** | **67.54%** |
+
 
 | name | Params | dataset | acc@1 |
 | --- | --- | --- | --- |
