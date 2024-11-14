@@ -22,10 +22,11 @@ PatternNet
 | --- | --- | --- | --- | --- | --- | --- |
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 19.47ms | 61.34mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 16.44ms | 37.28mJ | 39.22% |
+| Dynn | 14.93M | NaSC | 97.37 | 9.57ms | 29.67mJ | **51.63%** |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 14.02ms | **35.06mJ** | **42.84%** |
 | GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 17.11ms | 117.20mJ | - |
 | Distillation | 4.56M | PatternNet | 98.93 | 16.47ms | 56.02mJ | 52.20% |
-| Dynn | 16.09M | PatternNet | 98.93 | 16.47ms | 56.02mJ | 52.20% |
+| Dynn | 16.09M | PatternNet | 99.16 | 12.32ms | 65.29mJ | 44.29% |
 | **Distillation+dynn** | **4.72M** | PatternNet | **98.32** | 14.00ms | **44.79mJ** | **61.78%** |
 
 ### NVIDIA Jetson Orin Nano
@@ -33,11 +34,11 @@ PatternNet
 | --- | --- | --- | --- | --- | --- | --- |
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 28.71ms | 58.88mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 16.53ms | 32.63mJ | 44.58% |
-| Dynn | 14.93M | NaSC | 98.28 | 10.87ms | 27.17mJ | **53.10%** |
+| Dynn | 14.93M | NaSC | 97.37 | 10.87ms | 27.17mJ | **53.10%** |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 16.34ms | **27.77mJ** | **52.83%** |
 | GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 18.77ms | 107.01mJ | - |
 | Distillation | 4.56M | PatternNet | 98.93 | 18.74ms | 52.49mJ | 50.94% |
-| Dynn | 16.09M | PatternNet | 98.93 | 14.00ms | 60.2mJ | 43.740% |
+| Dynn | 16.09M | PatternNet | 99.16 | 14.00ms | 60.2mJ | 43.74% |
 | **Distillation+dynn** | **4.72M** | PatternNet | **98.32** | 16.30ms | **39.12mJ** | **63.44%** |
 
 ### Raspberry Pi 4 Model B
