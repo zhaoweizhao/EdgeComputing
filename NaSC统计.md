@@ -10,6 +10,10 @@ NaSC
 | Exit Rate | 27.0% | 31.32% | 29.28% | 12.4% |
 | Exit Accuracy | 99.3 | 98.8 | 99.4 | 88.5 |
 
+| **PatternNet-dynn-distillation** | Layer5 | Layer7 | Layer9  | Last Layer  |
+| --- | --- | --- | --- | --- |
+| Exit Rate | 22.3% | 40.3% | 34.2% | 3.1% |
+| Exit Accuracy | 99.7 | 99.3 | 97.5 | 83.9 |
 ```javascript
 PatternNet
 [0.0, 0.0, 0.0, 0.0, 0.0, 99.7789240972734, 0.0, 99.34667211106574, 0.0, 97.50120134550697, 0.0, 83.93782383419689]
