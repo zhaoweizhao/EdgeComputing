@@ -79,6 +79,7 @@ EXIT CORRECT RATE:
 | --- | --- | --- | --- | --- | --- | --- |
 | GFNet-12-384(Baseline) | 14.89M | NaSC | 99.10 | 381.6ms | 412.12mJ | - |
 | Distillation | 3.92M | NaSC | 98.28 | 156.5ms | 151.80mJ | 63.16% |
+| Dynn | 14.93M | NaSC | 97.37 | 190.0ms | 199.5mJ | 51.59% |
 | **Distillation+dynn** | **3.94M** | NaSC | **97.88** | 137.9ms | **133.76mJ** | **67.54%** |
 | GFNet-12-384(Baseline) | 15.93M | PatternNet | 99.74 | 1149.06ms | 1378.87mJ | - |
 | Distillation | 4.56M | PatternNet | 98.93 | 495.96ms | 500.91mJ | 63.67% |
